@@ -1,0 +1,11 @@
+<mat-toolbar color="primary" class="header-toolbar">
+  <span>User Management App</span>
+  <span class="spacer"></span>
+  @if (authStore.isAuthenticated()) {
+    <span class="user-info">Welcome, {{ authStore.username() }}</span>
+    <button mat-button (click)="logout()">
+      <mat-icon>logout</mat-icon>
+      Logout
+    </button>
+  }
+</mat-toolbar>
